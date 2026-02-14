@@ -1,60 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>CSS-only  Foundation book preview</title>
+    <title>CSS-only Foundation Book Preview</title>
     <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
-<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="cover">
+        <div class="book">
 
-  </head>
-    
-  <body>
-  <div class="cover">
-  <div class="book">
-  <label for="page-1"  class="book__page book__page--1">
-    <img src="assets/images/Sect 1G.png" alt="">
-  </label>
-  
-  <label for="page-2" class="book__page book__page--4">
-    <img src="assets/images/Sect 1.png" alt="">
-  </label>
-    
-  <!-- Resets the page -->
-  <input type="radio" name="page" id="page-1"/>
-    
-  <!-- Goes to the second page -->
-  <input type="radio" name="page" id="page-2"/>
-  <label class="book__page book__page--2">
-    <div class="book__page-front">
-      <div class="page__content">
-        <h1 class="page__content-book-title">Foundation</h1>
-        <h2 class="page__content-author">Isaac Asimov</h2>
-        
-        <p class="page__content-credits">
-          Introduction by 
-          <span>Paul Krugman</span>
-        </p>
-        
-        <p class="page__content-credits">
-          Illustrations by 
-          <span>Alex Wells</span>
-        </p>
-        
-        <div class="page__content-copyright">
-          <p>The Folio Society</p>
-          <p>London - MMXII</p>
+            <!-- Page 1 (Front Cover) -->
+            <label for="page-1" class="book__page book__page--1">
+                <img src="assets/images/Sect 1G.png" alt="">
+            </label>
+
+            <!-- Page 4 (Back Cover) -->
+            <label for="page-2" class="book__page book__page--4">
+                <img src="assets/images/Sect 2.png" alt="">
+            </label>
+
+            <!-- Radio inputs for page navigation -->
+            <input type="radio" name="page" id="page-1"/>
+            <input type="radio" name="page" id="page-2"/>
+
+            <!-- Page 2 & 3 (Inner Pages) -->
+            <label class="book__page book__page--2">
+                <div class="book__page-front" style="width:100%; height:100%; overflow:hidden;">
+                    <img src="assets/images/Sect 1.png" alt="Sect 1" style="width:100%; height:100%; object-fit:cover; display:block;">
+                </div>
+                <div class="book__page-back" style="width:100%; height:100%; overflow:hidden;">
+                    <img src="assets/images/Sect 2G.png" alt="Sect 2">
+                </div>
+            </label>
+
         </div>
-      </div>
     </div>
-    <div class="book__page-back">
-      <img src="assets/images/Sect 1G.png" alt="">
-    </div>
-  </label>
-</div>
-</div>
-    <script  src="./script.js"></script>
 
-  </body>
-  
+    <script src="./script.js"></script>
+</body>
 </html>
