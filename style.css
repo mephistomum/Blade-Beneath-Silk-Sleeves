@@ -20,11 +20,25 @@ body {
 
 .flipbook {
     width: 730px;
-    height: 530px;
+    height: 532px;
     position: relative;
+
+    /* shadow exists but hidden */
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.25),
+        0 10px 20px rgba(0, 0, 0, 0.15);
+
+    opacity: 1;
+    transition: box-shadow 0.3s ease;
 }
 
-.flipbook::after {
+/* When closed → remove shadow */
+.flipbook.no-shadow {
+    box-shadow: none;
+}
+
+
+/* .flipbook::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -38,7 +52,7 @@ body {
 
 .flipbook.shadow-active::after {
     opacity: 1;
-}
+} */
 
 
 
@@ -58,7 +72,7 @@ body {
 }
 
 .flipbook .page {
-    background: white;
+    background: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
